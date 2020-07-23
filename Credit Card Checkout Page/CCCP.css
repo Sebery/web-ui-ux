@@ -1,0 +1,228 @@
+/* COLORS */
+/* FONTS */
+/* FUNCTIONALITY */
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: gray;
+  font-family: "Roboto", sans-serif;
+}
+
+/* CANVAS STYLES */
+.canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #101112;
+  width: 320px;
+  height: 600px;
+  /* HEADER SECTION */
+  /* CARD SECTION */
+  /* PURCHASE SECTION */
+}
+
+.canvas .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 87%;
+  margin: 35px auto 35px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+.canvas .header-container h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.canvas .header-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.canvas .card-container {
+  width: 87%;
+  height: 168px;
+  background: linear-gradient(329.97deg, #d40c3d 0%, #ff602c 99.37%);
+  margin: 0 auto;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+.canvas .card-container .visa {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.canvas .card-container .visa :last-child {
+  color: #950d21;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.canvas .card-container .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  color: #fff;
+  font-weight: 510;
+  font-size: 24px;
+}
+
+.canvas .card-container .number :first-child {
+  color: #950d21;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.canvas .card-container .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.canvas .card-container .card-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.canvas .card-container .card-info :first-child p {
+  color: #950d21;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.canvas .purchase-container {
+  width: 100%;
+}
+
+.canvas .purchase-container .purchase-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 87%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px auto 25px auto;
+  color: #fff;
+}
+
+.canvas .purchase-container .purchase-title h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.canvas .purchase-container .purchase-box {
+  width: 100%;
+  background: #fff;
+  border-radius: 30px 30px 0px 0px;
+  height: 260px;
+}
+
+.canvas .purchase-container .purchase-box .shoes {
+  width: 230px;
+  position: absolute;
+  left: 45%;
+  top: 67%;
+  -webkit-transform: translate(-45%, -50%);
+          transform: translate(-45%, -50%);
+}
+
+.canvas .purchase-container .purchase-box .purchase-info {
+  width: 87%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 160px 0 0 0;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.canvas .purchase-container .purchase-box .purchase-info p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a0a7ba;
+}
+
+.canvas .purchase-container .purchase-box .purchase-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+}
+
+.canvas .purchase-container .purchase-box .purchase-info h3 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
+}
+
+.canvas .purchase-container .purchase-box .purchase-info a {
+  z-index: 9;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.canvas .purchase-container .purchase-box .purchase-info a img {
+  width: 80px;
+}
+/*# sourceMappingURL=CCCP.css.map */

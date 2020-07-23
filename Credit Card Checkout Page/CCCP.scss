@@ -1,0 +1,210 @@
+/* COLORS */
+$background-color: gray;
+$canvas-color: #101112;
+$primary-text-color: #fff;
+$secondary-text-color: #000;
+$terciary-text-color: #a0a7ba;
+$background-white: #fff;
+$color-text-red: #950d21;
+
+/* FONTS */
+$font-sizes: (
+	"regular": 24px,
+	"tiny": 12px,
+	"big": 36px,
+);
+
+$font-weights: (
+	"regular": 400,
+	"bold": 700,
+	"medium": 510,
+	"light": 300,
+);
+
+/* FUNCTIONALITY */
+@mixin center-element {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin card-red-text {
+	color: $color-text-red;
+	font-weight: get-weight(bold);
+	font-size: get-font(tiny);
+}
+
+@function get-font($size) {
+	@return map-get($font-sizes, $size);
+}
+
+@function get-weight($weight) {
+	@return map-get($font-weights, $weight);
+}
+
+/* GENERAL STYLES */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: $background-color;
+	font-family: "Roboto", sans-serif;
+}
+
+/* CANVAS STYLES */
+.canvas {
+	@include center-element();
+	background: $canvas-color;
+	width: 320px;
+	height: 600px;
+
+	/* HEADER SECTION */
+	.header-container {
+		display: flex;
+		width: 87%;
+		margin: 35px auto 35px auto;
+		justify-content: space-between;
+		color: $primary-text-color;
+
+		h2 {
+			font-size: get-font(regular);
+			font-weight: get-weight(regular);
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	/* CARD SECTION */
+	.card-container {
+		width: 87%;
+		height: 168px;
+		background: linear-gradient(329.97deg, #d40c3d 0%, #ff602c 99.37%);
+		margin: 0 auto;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+
+		.visa {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+
+			:last-child {
+				@include card-red-text();
+			}
+		}
+
+		.number {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			justify-content: left;
+			color: $primary-text-color;
+			font-weight: get-weight(medium);
+			font-size: get-font(regular);
+
+			:first-child {
+				@include card-red-text();
+			}
+		}
+
+		.card-info {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			justify-content: space-between;
+
+			div {
+				display: flex;
+				justify-content: space-between;
+				color: $primary-text-color;
+				font-weight: get-weight(bold);
+				font-size: get-font(tiny);
+			}
+
+			:first-child {
+				p {
+					@include card-red-text();
+				}
+			}
+		}
+	}
+
+	/* PURCHASE SECTION */
+	.purchase-container {
+		width: 100%;
+
+		.purchase-title {
+			display: flex;
+			width: 87%;
+			justify-content: space-between;
+			margin: 20px auto 25px auto;
+			color: $primary-text-color;
+
+			h2 {
+				font-size: get-font(regular);
+				font-weight: get-weight(regular);
+			}
+		}
+
+		.purchase-box {
+			width: 100%;
+			background: $background-white;
+			border-radius: 30px 30px 0px 0px;
+			height: 260px;
+
+			.shoes {
+				width: 230px;
+				position: absolute;
+				left: 45%;
+				top: 67%;
+				transform: translate(-45%, -50%);
+			}
+
+			.purchase-info {
+				width: 87%;
+				display: flex;
+				padding: 160px 0 0 0;
+				margin: 0 auto;
+				justify-content: space-between;
+
+				p {
+					font-size: get-font(tiny);
+					font-weight: get-weight(regular);
+					color: $terciary-text-color;
+				}
+
+				h1 {
+					font-size: get-font(big);
+					font-weight: get-weight(bold);
+					color: $secondary-text-color;
+				}
+
+				h3 {
+					font-size: get-font(regular);
+					font-weight: get-weight(light);
+					color: $secondary-text-color;
+				}
+
+				a {
+					z-index: 9;
+					align-self: center;
+
+					img {
+						width: 80px;
+					}
+				}
+			}
+		}
+	}
+}
