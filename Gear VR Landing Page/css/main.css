@@ -1,0 +1,203 @@
+/* COLORS */
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #160c6e;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+/* MIXINS */
+/* RESPONSIVE MIXINS */
+/* TEXT SIZES */
+/* TEXT WEIGHTS */
+@media screen and (min-width: 465px) {
+  body .left-container .content {
+    display: flex;
+    flex-direction: column;
+  }
+  body .left-container .content div {
+    margin-top: 20px;
+    display: flex;
+  }
+  body .left-container .content div p {
+    margin: 0px 10px;
+  }
+}
+@media screen and (min-width: 769px) {
+  body .canvas {
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 12fr;
+  }
+  body .left-container {
+    justify-content: space-around;
+    text-align: left;
+    padding: 20px 0px 20px 20px;
+  }
+  body .left-container .content div {
+    flex-direction: column;
+  }
+  body .left-container .content div p {
+    margin: 10px 0px;
+  }
+  body .left-container .social-content img {
+    margin-right: 8;
+  }
+  body .main-container .info {
+    max-width: 600px;
+  }
+  body .main-container img {
+    max-height: 500px;
+    max-width: 500px;
+  }
+  body .main-container .blue-circle {
+    max-height: 600px;
+    max-width: 600px;
+  }
+  body .main-container .gradient-circle {
+    max-height: 500px;
+    max-width: 500px;
+  }
+}
+/*
+body {
+    /* MAIN CONTENT SECTION 
+    .main-container {
+        width: 50%;
+        margin: 0 auto;
+    }
+} */
+/* CANVAS STYLES */
+.canvas {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 12fr;
+  grid-template-rows: 6fr 6fr;
+}
+
+/* MAIN CONTENT SECTION */
+.main-container {
+  position: relative;
+  background: url(../img/circles.svg);
+  background-size: contain;
+  background-position: center;
+}
+.main-container .info {
+  z-index: 2;
+  text-align: center;
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+.main-container .info a {
+  text-decoration: none;
+  position: relative;
+  background: linear-gradient(345.71deg, #df387c -33.39%, #ff602c 103.69%);
+  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 1s ease;
+}
+.main-container .info a:hover {
+  background: linear-gradient(345.71deg, #ff602c -33.39%, #df387c 103.69%);
+}
+.main-container .info h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-container .info p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.main-container .blue-circle {
+  background: #3f21d0;
+  opacity: 0.6;
+  width: 90%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-container .blue-circle::before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+.main-container .gradient-circle {
+  background: linear-gradient(321.25deg, #df387c -33.39%, #ff602c 103.69%);
+  width: 70%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-container .gradient-circle::before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+.main-container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  filter: drop-shadow(0px 50px 50px rgba(0, 0, 0, 0.3));
+}
+
+/* LEFT SECTION */
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+.left-container .content {
+  margin-top: 20px;
+}
+.left-container .content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.left-container .content p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+.left-container .social-content {
+  margin-top: 20px;
+}
+.left-container .social-content img {
+  margin: 0px 8px;
+}
+
+/*# sourceMappingURL=main.css.map */

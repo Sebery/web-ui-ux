@@ -1,0 +1,79 @@
+@use 'config';
+
+@include config.tablet {
+	body {
+		.left-container {
+			.content {
+				display: flex;
+				flex-direction: column;
+				div {
+					margin-top: 20px;
+					display: flex;
+					p {
+						margin: 0px 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include config.desktop {
+	body {
+		.canvas {
+			grid-template-columns: 2fr 10fr;
+			grid-template-rows: 12fr;
+		}
+
+		.left-container {
+			justify-content: space-around;
+			text-align: left;
+			padding: 20px 0px 20px 20px;
+
+			.content {
+				div {
+					flex-direction: column;
+					p {
+						margin: 10px 0px;
+					}
+				}
+			}
+
+			.social-content {
+				img {
+					margin-right: 8;
+				}
+			}
+		}
+
+		.main-container {
+			.info {
+				max-width: 600px;
+			}
+
+			img {
+				max-height: 500px;
+				max-width: 500px;
+			}
+
+			.blue-circle {
+				max-height: 600px;
+				max-width: 600px;
+			}
+
+			.gradient-circle {
+				max-height: 500px;
+				max-width: 500px;
+			}
+		}
+	}
+}
+
+/*
+body {
+    /* MAIN CONTENT SECTION 
+    .main-container {
+        width: 50%;
+        margin: 0 auto;
+    }
+} */
